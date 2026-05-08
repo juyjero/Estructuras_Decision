@@ -1,35 +1,51 @@
 Algoritmo AspiranteEjecutivo
+	
 	Definir genero, estadoCivil Como Caracter
-	Definir salida como cadena
-	Definir estatura como real
+	Definir salida Como Cadena
+	Definir estatura Como Real
 	Definir edad Como Entero
-	Imprimir "Genero del aspirante (M/F) : " 
-	leer genero
-	Imprimir "Estado civil del aspirante (S/C/V/D/U) : " 
-	leer estadoCivil
-	Imprimir "Estatura del aspirante: " 
-	leer estatura
-	Imprimir "Edad del aspirante (M/F) : " 
-	leer edad
-	si (estadoCivil == 'S' o estadoCivil == 's' ) Entonces 
-		segun ( genero ) hacer
-			caso 'F':
-			Caso 'f': 
-				si( estatura> 1.60 y edad>= 20 y edad <= 25) Entonces
-					salida = "es apto"
-				SiNo
-					salida= "no es apto" 
-				fin si
-				
+	
+	Imprimir "Genero del aspirante (M/F): "
+	Leer genero
+	
+	Imprimir "Estado civil del aspirante (S/C/V/D/U): "
+	Leer estadoCivil
+	
+	Imprimir "Estatura del aspirante: "
+	Leer estatura
+	
+	Imprimir "Edad del aspirante: "
+	Leer edad
+	
+	Si estadoCivil = "S" O estadoCivil = "s" Entonces
 		
-		caso 'M':
-		Caso 'm': 
-			si( estatura> 1.65 y edad>= 18 y edad <= 24) Entonces
-				salida = "es apto"
-			SiNo
-				salida= "no es apto" 
-			FinSi
-	FinSegun
-FinSi
-Imprimir "
+		Segun genero Hacer
+			
+			Caso "F","f":
+				
+				Si estatura > 1.60 Y edad >= 20 Y edad <= 25 Entonces
+					salida = "Es apta"
+				SiNo
+					salida = "No es apta"
+				FinSi
+				
+				
+			Caso "M","m":
+				
+				Si estatura > 1.65 Y edad >= 18 Y edad <= 24 Entonces
+					salida = "Es apto"
+				SiNo
+					salida = "No es apto"
+				FinSi
+				
+		FinSegun
+		
+	SiNo
+		
+		salida = "No es apto"
+		
+	FinSi
+	
+	Imprimir salida
+	
 FinAlgoritmo
